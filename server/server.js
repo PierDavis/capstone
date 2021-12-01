@@ -95,8 +95,11 @@ const tasksInventory = [
     "clean floorboards and plane",
     "remove nails from floorboards",
 ];
-app.get("/api/tasks-inventory", (req, res) => {
-    
+
+const taskList = [];
+
+
+app.get("/api/tasksInventory", (req, res) => {
         
         res.status(200).send(tasksInventory);
         //filter out just the items that match the query input, and return only those items
@@ -105,5 +108,16 @@ app.get("/api/tasks-inventory", (req, res) => {
     // }
 });
 //app.get('/api/taskShell)
+
+app.post("/api/singleTask/:item", (req, res) => {
+const {item} = req.params;
+taskList.push(item)
+    res.status(200).send(taskTemplate.filter(item => item.name === req));
+});
+
+// .send(taskTemplate.filter(item => item.name === req));
+// }); add event listener for a click of add task button to newly created - send back items from template list, auto call 2nd function of filtered list to populate tools and materials 
+//event listener to indicate the tools/materials for each task
+//name of task goes to all three boxes, plus descr goes to task list, and tool names goes to tool list, material names goes to material list
 
 app.listen(3000, () => console.log("Server is live on port 3000"));

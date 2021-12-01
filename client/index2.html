@@ -24,8 +24,20 @@
         <h2>A detailed task list of self-supported projects on 16th Street</h2>
     </header>
     <section>
-        <input type='text' id='add-task' class='add-task-input'/>
-                <button id='postTaskNotes'>Add Task</button>
+        <!-- <input type='text' id='add-task' class='add-task-input'/> -->
+               <select id='getAddTask' class='task-drop-down'>
+                    <!-- <option value='0'>0</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9'>9</option> -->
+                </select>
+                 <button id='postTaskButton'>Add Task</button>
             
     </section>
     </section>
@@ -64,13 +76,13 @@
                 <button id='postNewMaterials'>Add Materials</button>
             </section>
         </section>
-        <!-- <section class='response-area'>
+        <section class='response-area'>
             <ol>
                 <li>Choose an option above</li>
                 <li>Click 'Submit'</li>
                 <li>Server response content will show here!</li>
             </ol>
-        </section> -->
+        </section>
     </main> 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
