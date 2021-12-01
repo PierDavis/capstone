@@ -77,4 +77,5 @@ function addToView(dataArr) {
     }
 }
 
+
 inventory();
