@@ -65,7 +65,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px dashed rgb(58, 173, 58);
+    margin: 20px;
+    border: 2px solid rgb(173, 58, 135);
 }
 
 .add-task-input {
@@ -91,3 +92,16 @@ h2 {
         flex-direction: column;
     }
 } */
+
+footer {
+    font-size: 22px;
+    color: rgb(66, 125, 235);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+}

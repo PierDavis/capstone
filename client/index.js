@@ -9,6 +9,7 @@ const getDropDown = document.getElementById('postTaskButton');
 
 // response section
 const responseSection = document.getElementsByClassName('response-area')[0];
+// const taskSection = document.getElementsByClassName('request-type')[0];
 const addTaskSection = document.getElementsByClassName('task-drop-down')[0];
 
 // handle submits
@@ -46,13 +47,13 @@ function addToDropDown(tasksArr) {
     } else {
         tasksArr.forEach(item => {
             // var el = document.createElement("option");
-            const el = document.createElement('option');
-            el.textContent = item;
-            el.value = item;
+            const li = document.createElement('option');
+            li.textContent = item;
+            li.value = item;
             //const t = document.createTextNode(item)
             //el.appendChild(t);
     
-            addTaskSection.appendChild(el)
+            addTaskSection.appendChild(li)
         })
     }
 }

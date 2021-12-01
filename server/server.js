@@ -6,77 +6,77 @@ app.use(cors());
 app.use(express.json());
 
 const taskTemplate = [{
-    name: 'Save original floorboards',
-    description: 'Need to remove all floorboards from house carefully to not damage tongue and grooves. Once boards are up, scrape any remaining tile and mastic off and remove all the nails from the boards.',
+    name: 'save original floorboards',
+    description: 'need to remove all floorboards from house carefully to not damage tongue and grooves. once boards are up, scrape any remaining tile and mastic off and remove all the nails from the boards.',
     requiredTools: [
         {
-            name: 'Pry bar',
+            name: 'pry bar',
             quantity: 2,
             haveIt: true
         },
         {
-            name: 'Hammer',
+            name: 'hammer',
             quantity: 1,
             haveIt: true
         },
         {
-            name: 'Sawzall',
+            name: 'sawzall',
             quantity: 2,
             haveIt: true
         }
     ],
     requiredMaterials: [
         {
-            name: 'Dust mask',
+            name: 'dust mask',
             quantity: 1,
             haveIt: true
         },
         {
-            name: 'Trash bags',
+            name: 'trash bags',
             quantity: 10,
             haveIt: true
         },
         {
-            name: 'Work gloves',
+            name: 'work gloves',
             quantity: 1,
             haveIt: true
         }, 
     ]
 },
 {
-    name: 'Cover windows in plastic',
-    description: 'Need to remove all floorboards from house carefully to not damage tongue and grooves. Once boards are up, scrape any remaining tile and mastic off and remove all the nails from the boards.',
+    name: 'cover windows in plastic',
+    description: 'need to remove all floorboards from house carefully to not damage tongue and grooves. once boards are up, scrape any remaining tile and mastic off and remove all the nails from the boards.',
     requiredTools: [
         {
-            name: 'Pry bar',
+            name: 'staple gun',
+            quantity: 1,
+            haveIt: false
+        },
+        {
+            name: 'hammer',
             quantity: 2,
             haveIt: true
         },
         {
-            name: 'Hammer',
-            quantity: 1,
-            haveIt: true
-        },
-        {
-            name: 'Sawzall',
+            name: 'scissors',
             quantity: 2,
             haveIt: true
         }
     ],
     requiredMaterials: [
         {
-            name: 'Dust mask',
+            name: 'plastic',
             quantity: 1,
-            haveIt: true
+            haveIt: false
         },
         {
-            name: 'Trash bags',
+            name: 'furring strips',
             quantity: 10,
-            haveIt: true
+            haveIt: false
         },
         {
-            name: 'Work gloves',
-            quantity: 1,
+            name: 'work gloves',
+            quantity: 2,
             haveIt: true
         }, 
     ]
