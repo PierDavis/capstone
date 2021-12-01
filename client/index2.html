@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index2.css" />
+
+    <title>Pier's Home Rehab</title>
+</head>
+<body>
+    <header>
+        <h1 class='site-title'>Pier's Home Rehab</h1>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Bungee+Outline&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    </header>
+    <section>
+        <header>
+        <h2>A detailed task list of self-supported projects on 16th Street</h2>
+    </header>
+    <section>
+        <input type='text' id='add-task' class='add-task-input'/>
+                <button id='postTaskNotes'>Add Task</button>
+            
+    </section>
+    </section>
+    <main>
+        <section class='request-area'>
+            <section class='request-type'>
+                <!-- <p class='request-descriptor'>get request</p> -->
+                <h4>Task List</h4>
+                <input type='text' id='add-notes' class='add-notes-input'/>
+                <button id='postTaskNotes'>Add Notes</button>
+            </section>
+
+            <section class='request-type'>
+                <h4>Tools Needed</h4>
+                <!-- <select id='params-input'>
+                    <option value='0'>0</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9'>9</option>
+                </select> -->
+                <input type='text' id='add-tools' 
+                class='add-tools-input'/>
+                <button id='postNewTools'>Add Tools</button>
+            </section>
+            <section class='request-type'>
+                <!-- <p class='request-descriptor'>get request: using query get inventory that matches query string</p> -->
+                <h4>Materials Needed</h4>
+                <input type='text' id='add-materials'
+                class='add-materials-input' />
+                <button id='postNewMaterials'>Add Materials</button>
+            </section>
+        </section>
+        <!-- <section class='response-area'>
+            <ol>
+                <li>Choose an option above</li>
+                <li>Click 'Submit'</li>
+                <li>Server response content will show here!</li>
+            </ol>
+        </section> -->
+    </main> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

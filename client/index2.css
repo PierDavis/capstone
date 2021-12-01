@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 20;
+    padding: 20;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+/* ol {
+    padding-left: 0;
+} */
+
+body {
+    background-color: rgb(243, 233, 220);
+}
+
+.site-title {
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 40px;
+    color: rgb(66, 125, 235);
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 22px;
+    color: rgb(66, 125, 235);
+    display: flex;
+    justify-content: center;
+}
+
+.request-area {
+    display: flex;
+    height: 200px;
+    justify-content: space-around;
+}
+
+.request-descriptor {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+}
+
+.request-type {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    padding-top: 0px;
+    width: 30vw;
+    border: 2px solid rgb(66, 125, 235);
+}
+.request-type-title {
+    margin-top: 0;
+}
+
+.response-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed rgb(58, 173, 58);
+}
+
+.add-task-input {
+    min-width: 25%;
+    justify-content: center;
+}
+
+.add-notes-input {
+    min-width: 100%;
+}
+
+.add-tools-input {
+    min-width: 100%;
+}
+
+.add-materials-input {
+    min-width: 100%;
+}
+
+
+/* @media (max-width: 500px) {
+    .request-area {
+        flex-direction: column;
+    }
+} */
