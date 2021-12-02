@@ -6,6 +6,8 @@ const getDropDown = document.getElementById('postTaskButton');
 // // inputs
 // const paramsInput = document.getElementById('params-input');
 // const queryInput = document.getElementById('query-input');
+const addTool = document.getElementsByClassName('postNewTools') [0];
+const singleTool = document.getElementsByClassName('add-tools-input') [0];
 
 // response section
 const responseSection = document.getElementsByClassName('response-area')[0];
@@ -15,7 +17,7 @@ const materialsSection = document.getElementsByClassName('materials-response')[0
 const addTaskSection = document.getElementsByClassName('task-drop-down')[0];
 
 // handle submits
-
+//CALLING FUNCTION TO POST TASKS/TOOLS/MATERIALS WITH CLICK TO BOXES
 getDropDown.addEventListener('click', () => {
     axios
         .post(`http://localhost:3000/api/singleTask/${addTaskSection.value}`)
@@ -27,6 +29,31 @@ getDropDown.addEventListener('click', () => {
         })
 
 });
+
+//CALL FUNCTION TO POST SINGLE TOOL TO OTHERTOOLS (TOOL LIST)
+addTool.addEventListener('click', () => {
+    axios
+        .post(`http://localhost:3000/api/singleTool/${singleTool.value}`)
+        .then(res => {
+            console.log(res.data)
+            addOtherToolsToToolView(res.data)
+        })
+
+});
+
+
+function addOtherToolsToToolView(dataArr) {
+        dataArr.forEach(item => {
+            const p = document.createElement('p');
+            const n = document.createTextNode(item.name)
+            p.appendChild(n);
+            // const q = document.createTextNode(' (' + item.quantity + ')')
+            // p.appendChild(q);
+    
+            toolsSection.appendChild(p)
+        })
+    }
+
 
 //need example of how to invoke this API request on page load! How do I do this with express?
 const inventory = () => {
@@ -121,6 +148,9 @@ function addToTaskView(dataArr) {
     }
 }
 
+
+
+//THIS FUNCTION ADDS STORED ARRAY TOOLS TO TOOL LIST
 function addToToolView(dataArr) {
     toolsSection.innerHTML = null;
 
@@ -157,7 +187,7 @@ function addToToolView(dataArr) {
         })
     }
 }
-
+//THIS FUNCTION ADDS STORED ARRAY MATERIALS TO MATERIAL LIST
 function addToMaterialsView(dataArr) {
     materialsSection.innerHTML = null;
 
