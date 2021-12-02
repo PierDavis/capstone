@@ -109,10 +109,22 @@ app.get("/api/tasksInventory", (req, res) => {
 });
 //app.get('/api/taskShell)
 
+// app.get("/api/savedTasks", (req, res) => {
+//     let savedTaskList = taskTemplate.filter(item => taskList.includes(item.name))
+//     res.status(200).send(tasksInventory);
+//     //filter out just the items that match the query input, and return only those items
+// // } else{
+// // res.status(200).send(inventory);
+// // }
+// });
+
 app.post("/api/singleTask/:item", (req, res) => {
 const {item} = req.params;
 taskList.push(item)
-    res.status(200).send(taskTemplate.filter(item => item.name === req));
+console.log('new task list is: ', taskList)
+let fullTaskList = taskTemplate.filter(item => taskList.includes(item.name))
+console.log('full task list is now: ', JSON.stringify(fullTaskList))
+    res.status(200).send(fullTaskList);
 });
 
 // .send(taskTemplate.filter(item => item.name === req));
