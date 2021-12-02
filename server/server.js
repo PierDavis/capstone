@@ -61,18 +61,252 @@ const taskTemplate = [{
             name: 'scissors',
             quantity: 2,
             haveIt: true
-        }
+        },
+        {
+            name: 'hand saw',
+            quantity: 2,
+            haveIt: true
+        },
     ],
     requiredMaterials: [
         {
-            name: 'plastic',
+            name: "10 x 100' roll of clear 6-mil plastic sheeting",
             quantity: 1,
             haveIt: false
         },
         {
-            name: 'furring strips',
+            name: "1 x 2 x 8' furring strips",
             quantity: 10,
             haveIt: false
+        },
+        {
+            name: 'box of nails',
+            quantity: 1,
+            haveIt: false
+        },
+        {
+            name: 'work gloves',
+            quantity: 2,
+            haveIt: true
+        }, 
+    ]
+},
+{
+    name: 'remove nails from joists',
+    description: 'remove the nails from joists as floor boards are pulled up',
+    requiredTools: [
+        {
+            name: 'hammer',
+            quantity: 2,
+            haveIt: false
+        },
+        {
+            name: 'end-cutting pliers',
+            quantity: 2,
+            haveIt: false
+        },
+    ],
+    requiredMaterials: [
+        {
+            name: 'rusty nail bucket',
+            quantity: 1,
+            haveIt: true
+        },
+        {
+            name: 'work gloves',
+            quantity: 2,
+            haveIt: true
+        }, 
+    ]
+},
+{
+    name: 'sweep basement',
+    description: 'pretty straightforward, the basement needs attention, but make sure upper floor edges are swept first.',
+    requiredTools: [
+        {
+            name: 'broom',
+            quantity: 2,
+            haveIt: false
+        },
+        {
+            name: 'dustpan',
+            quantity: 2,
+            haveIt: true
+        },
+    ],
+    requiredMaterials: [
+        {
+            name: 'box of garbage bags',
+            quantity: 1,
+            haveIt: true
+        },
+        {
+            name: 'nitrile or work gloves',
+            quantity: 2,
+            haveIt: true
+        }, 
+    ]
+},
+{
+    name: 'scrap paint off brick foundation',
+    description: '',
+    requiredTools: [
+        {
+            name: '',
+            quantity: 2,
+            haveIt: false
+        },
+        {
+            name: '',
+            quantity: 2,
+            haveIt: false
+        },
+    ],
+    requiredMaterials: [
+        {
+            name: '',
+            quantity: 1,
+            haveIt: true
+        },
+        {
+            name: 'nitrile or work gloves',
+            quantity: 2,
+            haveIt: true
+        }, 
+    ]
+},
+{
+    name: 'restore brick fireplace',
+    description: '',
+    requiredTools: [
+        {
+            name: 'broom',
+            quantity: 2,
+            haveIt: false
+        },
+        {
+            name: 'dustpan',
+            quantity: 2,
+            haveIt: true
+        },
+    ],
+    requiredMaterials: [
+        {
+            name: '',
+            quantity: 1,
+            haveIt: true
+        },
+        {
+            name: '',
+            quantity: 2,
+            haveIt: true
+        }, 
+    ]
+},
+{
+    name: 'rip out attic framing',
+    description: 'insert.',
+    requiredTools: [
+        {
+            name: 'hammer',
+            quantity: 2,
+            haveIt: false
+        },
+        {
+            name: 'end-cutting pliers',
+            quantity: 2,
+            haveIt: false
+        },
+    ],
+    requiredMaterials: [
+        {
+            name: 'rusty nail bucket',
+            quantity: 1,
+            haveIt: true
+        },
+        {
+            name: 'work gloves',
+            quantity: 2,
+            haveIt: true
+        }, 
+    ]
+},
+{
+    name: 'wage war against vines',
+    description: 'bring a friend or five.',
+    requiredTools: [
+        {
+            name: 'broom',
+            quantity: 2,
+            haveIt: false
+        },
+        {
+            name: 'dustpan',
+            quantity: 2,
+            haveIt: true
+        },
+    ],
+    requiredMaterials: [
+        {
+            name: 'packs of landscape bags',
+            quantity: 5,
+            haveIt: true
+        },
+        {
+            name: 'nitrile or work gloves',
+            quantity: 2,
+            haveIt: true
+        }, 
+    ]
+},
+{
+    name: 'remove nails from floorboards',
+    description: 'remove the nails from floorboards before transport, probably best to remove all nails from attic and second floor boards before removing first floor wood',
+    requiredTools: [
+        {
+            name: 'hammer',
+            quantity: 2,
+            haveIt: false
+        },
+        {
+            name: 'end-cutting pliers',
+            quantity: 2,
+            haveIt: false
+        },
+    ],
+    requiredMaterials: [
+        {
+            name: 'rusty nail bucket',
+            quantity: 1,
+            haveIt: true
+        },
+        {
+            name: 'work gloves',
+            quantity: 2,
+            haveIt: true
+        }, 
+    ]
+},
+{
+    name: 'clean and plane floorboards',
+    description: 'insert.',
+    requiredTools: [
+        {
+            name: 'broom',
+            quantity: 2,
+            haveIt: false
+        },
+        {
+            name: 'dustpan',
+            quantity: 2,
+            haveIt: true
+        },
+    ],
+    requiredMaterials: [
+        {
+            name: 'box of garbage bags',
+            quantity: 1,
+            haveIt: true
         },
         {
             name: 'work gloves',
@@ -89,11 +323,12 @@ const tasksInventory = [
     "remove nails from joists",
     "sweep basement",
     "scrap paint off brick foundation",
-    "clean brick fireplace",
+    "restore brick fireplace",
     "rip out attic framing",
     "wage war against vines",
-    "clean floorboards and plane",
     "remove nails from floorboards",
+    "clean and plane floorboards",
+
 ];
 
 const taskList = [];

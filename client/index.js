@@ -143,10 +143,10 @@ function addToToolView(dataArr) {
                 const n = document.createTextNode(subItemTool.name)
                 p.appendChild(n);
                 toolsSection.appendChild(p)
-                const p2 = document.createElement('p');
-                const q = document.createTextNode(subItemTool.quantity)
-                p2.appendChild(q);
-                p.appendChild(p2);
+                //const p2 = document.createElement('p');
+                const q = document.createTextNode(' (' + subItemTool.quantity + ')')
+                p.appendChild(q);
+                //p.appendChild(p2);
             })
             // console.log('pink crane tool ?', tool)
            

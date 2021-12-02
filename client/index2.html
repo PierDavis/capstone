@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     img {
-        width: 20%;
-        height: 20%;
+        width: 30%;
+        height: 30%;
     }
 </style>
     <link rel="stylesheet" href="index2.css" />
@@ -72,20 +72,18 @@
         <div>
             <footer><h3>Gallery</h3></footer>
         </div>
-        <div id="photos">
-            <img src="../chimney_before.png">
-            <img src="../chimney_after.png">
-        </div>
-        <div>    
-            <img src="../floors_before.png">
-            <img src="../floors_during1.png">
-            <img src="../floors_during2.png">
-        </div>
+        <div class='photo-container'>
+            <div id="before photos">
             <img src="../fireplace_before.png">
+            <img src="../chimney_before.png">
+            <img src="../floors_before.png">
+            </div>
+            <div id="after photos">    
             <img src="../fireplace_during2.png">
-            <img src="../fireplace_during1.png">
+            <img src="../chimney_after.png">
+            <img src="../floors_during2.png">
+            </div>
         </div>
-    </div>
     </main> 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
