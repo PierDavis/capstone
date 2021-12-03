@@ -1,11 +1,7 @@
 // submit buttons
 const getDropDown = document.getElementById('postTaskButton');
-// const getParamsSubmit = document.getElementById('getParamsSubmit');
-// const getQuerySubmit = document.getElementById('getQuerySubmit');
 
-// // inputs
-// const paramsInput = document.getElementById('params-input');
-// const queryInput = document.getElementById('query-input');
+// inputs
 const addTool = document.getElementsByClassName('postNewTools') [0];
 const singleTool = document.getElementsByClassName('add-tools-input') [0];
 
@@ -47,8 +43,7 @@ function addOtherToolsToToolView(dataArr) {
             const p = document.createElement('p');
             const n = document.createTextNode(item.name)
             p.appendChild(n);
-            // const q = document.createTextNode(' (' + item.quantity + ')')
-            // p.appendChild(q);
+           
     
             toolsSection.appendChild(p)
         })
@@ -148,8 +143,6 @@ function addToTaskView(dataArr) {
     }
 }
 
-
-
 //THIS FUNCTION ADDS STORED ARRAY TOOLS TO TOOL LIST
 function addToToolView(dataArr) {
     toolsSection.innerHTML = null;
@@ -213,15 +206,9 @@ function addToMaterialsView(dataArr) {
                 p.appendChild(n);
                 p.appendChild(q);
                 materialsSection.appendChild(p)
-                //const p2 = document.createElement('p');
-                
-                //p.appendChild(p2);
+            
             })
-            // console.log('pink crane tool', tool)
            
-            // const q = document.createTextNode(tool.quantity);
-            // p.appendChild(q);
-    
             
         })
     }

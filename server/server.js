@@ -152,19 +152,19 @@ const taskTemplate = [{
     description: '',
     requiredTools: [
         {
-            name: '',
+            name: 'hard steel scrapers',
             quantity: 2,
             haveIt: false
         },
         {
-            name: '',
+            name: 'wire brush',
             quantity: 2,
             haveIt: false
         },
     ],
     requiredMaterials: [
         {
-            name: '',
+            name: 'drop plastic',
             quantity: 1,
             haveIt: true
         },
@@ -180,24 +180,24 @@ const taskTemplate = [{
     description: '',
     requiredTools: [
         {
-            name: 'broom',
+            name: 'steel brush',
             quantity: 2,
             haveIt: false
         },
         {
-            name: 'dustpan',
+            name: 'hard steel scraper',
             quantity: 2,
             haveIt: true
         },
     ],
     requiredMaterials: [
         {
-            name: '',
+            name: 'brick cleaner solution',
             quantity: 1,
             haveIt: true
         },
         {
-            name: '',
+            name: 'garbage bags',
             quantity: 2,
             haveIt: true
         }, 
@@ -236,12 +236,12 @@ const taskTemplate = [{
     description: 'bring a friend or five.',
     requiredTools: [
         {
-            name: 'broom',
+            name: 'shovel',
             quantity: 2,
             haveIt: false
         },
         {
-            name: 'dustpan',
+            name: 'loppers',
             quantity: 2,
             haveIt: true
         },
@@ -292,25 +292,25 @@ const taskTemplate = [{
     description: 'insert.',
     requiredTools: [
         {
-            name: 'broom',
+            name: 'hard steel scraper',
             quantity: 2,
             haveIt: false
         },
         {
-            name: 'dustpan',
+            name: 'wide chisel',
             quantity: 2,
             haveIt: true
         },
     ],
     requiredMaterials: [
         {
-            name: 'box of garbage bags',
-            quantity: 1,
+            name: 'contractor garbage bags',
+            quantity: 6,
             haveIt: true
         },
         {
             name: 'work gloves',
-            quantity: 2,
+            quantity: 1,
             haveIt: true
         }, 
     ]
@@ -338,21 +338,9 @@ const otherMaterials = [];
 app.get("/api/tasksInventory", (req, res) => {
         
         res.status(200).send(tasksInventory);
-        //filter out just the items that match the query input, and return only those items
-    // } else{
-    // res.status(200).send(inventory);
-    // }
+     
 });
-//app.get('/api/taskShell)
 
-// app.get("/api/savedTasks", (req, res) => {
-//     let savedTaskList = taskTemplate.filter(item => taskList.includes(item.name))
-//     res.status(200).send(tasksInventory);
-//     //filter out just the items that match the query input, and return only those items
-// // } else{
-// // res.status(200).send(inventory);
-// // }
-// });
 
 // Adds single task from taskTemplates to task list, then returns the whole list
 app.post("/api/singleTask/:item", (req, res) => {
@@ -365,14 +353,6 @@ console.log('full task list is now: ', JSON.stringify(fullTaskList))
 });
 
 //ATTEMPT TO POST NEW TOOL AND MATERIAL TO LISTS
-// const {
-//     createTool,
-//     createMaterial
-// } = require('./client/index')
-
-// app.post(`/api/singleTool`, createTool)
-// app.post(`/api/singleMaterial`, createMaterial)
-
 // Adds single tool to otherTools list, then returns the whole list of otherTools
 
 app.post("/api/singleTool/:item", (req, res) => {
@@ -384,8 +364,8 @@ app.post("/api/singleTool/:item", (req, res) => {
         res.status(200).send(otherTools);
     });
 
-// .send(taskTemplate.filter(item => item.name === req));
-// }); add event listener for a click of add task button to newly created - send back items from template list, auto call 2nd function of filtered list to populate tools and materials 
+
+// add event listener for a click of add task button to newly created - send back items from template list, auto call 2nd function of filtered list to populate tools and materials 
 //event listener to indicate the tools/materials for each task
 //name of task goes to all three boxes, plus descr goes to task list, and tool names goes to tool list, material names goes to material list
 

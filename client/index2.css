@@ -5,10 +5,6 @@
     font-family: 'Lato', sans-serif;
 }
 
-/* ol {
-    padding-left: 0;
-} */
-
 body {
     background-color: rgb(243, 233, 220);
 }
@@ -92,9 +88,6 @@ h2 {
     border: 2px solid rgb(66, 125, 235);
 }
 
-/* .request-type-title {
-    margin-top: 0;
-} */
 
 .response-area {
     display: flex;
@@ -123,12 +116,6 @@ h2 {
     min-width: 100%;
 }
 
-
-/* @media (max-width: 500px) {
-    .request-area {
-        flex-direction: column;
-    }
-} */
 
 footer {
     font-size: 22px;
