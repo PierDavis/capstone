@@ -1,18 +1,23 @@
-// submit buttons
+// submit ('Add Task' button) button and drop-down menu for taskInventory array
 const getDropDown = document.getElementById('postTaskButton');
 
-// inputs
+// inputs for the 'Add Tools' button
 const addTool = document.getElementsByClassName('postNewTools') [0];
 const singleTool = document.getElementsByClassName('add-tools-input') [0];
 
-// response section
+//WIP: inputs for the 'Add Materials' button
+// const addMaterial = document.getElementsByClassName('postNewMaterials') [0];
+// const singleMaterial = document.getElementsByClassName('add-materials-input') [0];
+
+// response section defines lists within boxes where data is sent
 const responseSection = document.getElementsByClassName('response-area')[0];
 const toolsSection = document.getElementsByClassName('tools-response')[0];
 const materialsSection = document.getElementsByClassName('materials-response')[0];
+
 // const taskSection = document.getElementsByClassName('request-type')[0];
 const addTaskSection = document.getElementsByClassName('task-drop-down')[0];
 
-// handle submits
+// handles submits for turning singleTask selected from tasksInventory into taskList with content from matching taskTemplate through 'singleTask api' aka
 //CALLING FUNCTION TO POST TASKS/TOOLS/MATERIALS WITH CLICK TO BOXES
 getDropDown.addEventListener('click', () => {
     axios
@@ -26,7 +31,7 @@ getDropDown.addEventListener('click', () => {
 
 });
 
-//CALL FUNCTION TO POST SINGLE TOOL TO OTHERTOOLS (TOOL LIST)
+//CALL FUNCTION TO POST SINGLE TOOL TO otherTools (TOOL LIST)
 addTool.addEventListener('click', () => {
     axios
         .post(`http://localhost:3000/api/singleTool/${singleTool.value}`)
@@ -36,7 +41,6 @@ addTool.addEventListener('click', () => {
         })
 
 });
-
 
 function addOtherToolsToToolView(dataArr) {
         dataArr.forEach(item => {
@@ -73,7 +77,7 @@ const savedTask = () => {
 console.log(inventory)
 
 
-// REPURPOSE to populate defined list of tasks
+//populate defined list of tasks
 //separate functions may be needed to add task tools and materials lists
 function addToDropDown(tasksArr) {
     addTaskSection.innerHTML = null;
@@ -117,7 +121,7 @@ function addToView(dataArr) {
         })
     }
 }
-
+//THIS FUNCTION ADDS STORED ARRAY NAME + DESCRIPTION TO TASK LIST
 function addToTaskView(dataArr) {
     responseSection.innerHTML = null;
 
