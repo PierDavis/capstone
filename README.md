@@ -13,6 +13,6 @@ The MVP contains one page with four features:
 3) A ‘tools needed’ box to contain the tools and quantities needed for each task once the task is selected. This box also contains an input field to add tools.
 4) A ‘materials needed’ box to contain the materials and quantities needed for each task once the task is selected. This box also contains an input field to add materials.
 
-## Product Roadmap:
+## Product Roadmap
 
-The existing tasks are prioritized in the current phase of her rehab project, but additional tasks and their descriptions will be added on the back-end as this renovation progresses. As the project progresses, additional photos documenting the work will also be added.
+The existing tasks are prioritized in the current phase of Pier's rehab project, but additional tasks and their descriptions will be added on the back-end as this renovation progresses. As the project progresses, additional photos documenting the work will also be added.

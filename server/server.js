@@ -5,7 +5,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-// Master task list 'array of objects' that contains the data (name, description; tools, quantities, boolean; materials, quantities, boolean) that gets separated into the 3 containers on the front-end
+// Master task list -array of objects- that contains the data (name, description; tools, quantities, boolean; materials, quantities, boolean) that gets separated into the 3 containers on the front-end
 
 const taskTemplate = [{
     name: 'save original floorboards',
@@ -369,6 +369,15 @@ app.post("/api/singleTool/:item", (req, res) => {
         res.status(200).send(otherTools);
     });
 
+
+app.post("/api/singleMaterial/:item", (req, res) => {
+        const {item} = req.params;
+        otherMaterials.push({'name': item})
+        console.log('new material list is: ', otherMaterials)
+        // let fullToolList = taskTemplate.filter(item => toolList.includes(item.name))
+        // console.log('full task list is now: ', JSON.stringify(fullToolList))
+            res.status(200).send(otherMaterials);
+        });
 
 // add event listener for a click of add task button to newly created - send back items from template list, auto call 2nd function of filtered list to populate tools and materials 
 //event listener to indicate the tools/materials for each task

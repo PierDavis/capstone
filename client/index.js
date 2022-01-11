@@ -1,4 +1,4 @@
-// submit ('Add Task' button) button and drop-down menu for taskInventory array
+// submit ('Add Task' button) button on drop-down menu for taskInventory array
 const getDropDown = document.getElementById('postTaskButton');
 
 // inputs for the 'Add Tools' button
@@ -6,8 +6,8 @@ const addTool = document.getElementsByClassName('postNewTools') [0];
 const singleTool = document.getElementsByClassName('add-tools-input') [0];
 
 //WIP: inputs for the 'Add Materials' button
-// const addMaterial = document.getElementsByClassName('postNewMaterials') [0];
-// const singleMaterial = document.getElementsByClassName('add-materials-input') [0];
+const addMaterial = document.getElementsByClassName('postNewMaterials') [0];
+const singleMaterial = document.getElementsByClassName('add-materials-input') [0];
 
 // response section defines lists within boxes where data is sent
 const responseSection = document.getElementsByClassName('response-area')[0];
@@ -53,6 +53,27 @@ function addOtherToolsToToolView(dataArr) {
         })
     }
 
+//CALL FUNCTION TO POST SINGLE MATERIAL TO otherMaterials (MATERIAL LIST)
+addMaterial.addEventListener('click', () => {
+    axios
+        .post(`http://localhost:3000/api/singleMaterial/${singleMaterial.value}`)
+        .then(res => {
+            console.log(res.data)
+            addOtherMaterialsToMaterialView(res.data)
+        })
+
+});
+
+function addOtherMaterialsToMaterialView(dataArr) {
+        dataArr.forEach(item => {
+            const p = document.createElement('p');
+            const n = document.createTextNode(item.name)
+            p.appendChild(n);
+           
+    
+            materialsSection.appendChild(p)
+        })
+    }
 
 //need example of how to invoke this API request on page load! How do I do this with express?
 const inventory = () => {
