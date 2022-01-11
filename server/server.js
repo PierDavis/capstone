@@ -379,6 +379,15 @@ app.post("/api/singleMaterial/:item", (req, res) => {
             res.status(200).send(otherMaterials);
         });
 
+app.post("/api/singleNote/:item", (req, res) => {
+         const {item} = req.params;
+        taskList.push({'name': item})
+        console.log('new material list is: ', taskList)
+        // let fullToolList = taskTemplate.filter(item => toolList.includes(item.name))
+        // console.log('full task list is now: ', JSON.stringify(fullToolList))
+            res.status(200).send(taskList);
+        });
+
 // add event listener for a click of add task button to newly created - send back items from template list, auto call 2nd function of filtered list to populate tools and materials 
 //event listener to indicate the tools/materials for each task
 //name of task goes to all three boxes, plus description goes to task list, and tool names goes to tool list, material names goes to material list

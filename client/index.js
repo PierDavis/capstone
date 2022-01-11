@@ -5,14 +5,19 @@ const getDropDown = document.getElementById('postTaskButton');
 const addTool = document.getElementsByClassName('postNewTools') [0];
 const singleTool = document.getElementsByClassName('add-tools-input') [0];
 
-//WIP: inputs for the 'Add Materials' button
+//inputs for the 'Add Materials' button
 const addMaterial = document.getElementsByClassName('postNewMaterials') [0];
 const singleMaterial = document.getElementsByClassName('add-materials-input') [0];
+
+//inputs for the 'Add Notes' button
+const addNote = document.getElementsByClassName('postNewNotes') [0];
+const singleNote = document.getElementsByClassName('add-notes-input') [0];
 
 // response section defines lists within boxes where data is sent
 const responseSection = document.getElementsByClassName('response-area')[0];
 const toolsSection = document.getElementsByClassName('tools-response')[0];
 const materialsSection = document.getElementsByClassName('materials-response')[0];
+// const notesSection = document.getElementsByClassName('notes-response') [0];
 
 // const taskSection = document.getElementsByClassName('request-type')[0];
 const addTaskSection = document.getElementsByClassName('task-drop-down')[0];
@@ -75,6 +80,29 @@ function addOtherMaterialsToMaterialView(dataArr) {
         })
     }
 
+//CALL FUNCTION TO POST SINGLE NOTE TO otherNotes (TASK LIST)
+addNote.addEventListener('click', () => {
+    axios
+        .post(`http://localhost:3000/api/singleNote/${singleNote.value}`)
+        .then(res => {
+            console.log(res.data)
+            addOtherNotesToNoteView(res.data)
+        })
+
+});
+
+function addOtherNotesToNoteView(dataArr) {
+        dataArr.forEach(item => {
+            const p = document.createElement('p');
+            const n = document.createTextNode(item.name)
+            p.appendChild(n);
+           
+    
+            responseSection.appendChild(p)
+        })
+    }
+    
+    
 //need example of how to invoke this API request on page load! How do I do this with express?
 const inventory = () => {
     axios
