@@ -357,7 +357,7 @@ console.log('full task list is now: ', JSON.stringify(fullTaskList))
     res.status(200).send(fullTaskList);
 });
 
-//POST NEW TOOL AND MATERIAL TO LISTS
+//POST NEW TOOL, MATERIAL and NOTE TO LISTS
 // Adds single tool to otherTools list, then returns the whole list of otherTools
 
 app.post("/api/singleTool/:item", (req, res) => {

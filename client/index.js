@@ -103,7 +103,7 @@ function addOtherNotesToNoteView(dataArr) {
     }
     
     
-//need example of how to invoke this API request on page load! How do I do this with express?
+
 const inventory = () => {
     axios
         .get('http://localhost:3000/api/tasksInventory')
@@ -127,7 +127,6 @@ console.log(inventory)
 
 
 //populate defined list of tasks
-//separate functions may be needed to add task tools and materials lists
 function addToDropDown(tasksArr) {
     addTaskSection.innerHTML = null;
 
@@ -196,7 +195,7 @@ function addToTaskView(dataArr) {
     }
 }
 
-//THIS FUNCTION ADDS STORED ARRAY TOOLS TO TOOL LIST
+//THIS FUNCTION ADDS STORED ARRAY OF TOOLS TO TOOL LIST
 function addToToolView(dataArr) {
     toolsSection.innerHTML = null;
 
@@ -224,7 +223,6 @@ function addToToolView(dataArr) {
                 p.appendChild(q);
                 //p.appendChild(p2);
             })
-            // console.log('pink crane tool ?', tool)
            
             // const q = document.createTextNode(tool.quantity);
             // p.appendChild(q);
@@ -233,7 +231,7 @@ function addToToolView(dataArr) {
         })
     }
 }
-//THIS FUNCTION ADDS STORED ARRAY MATERIALS TO MATERIAL LIST
+//THIS FUNCTION ADDS STORED ARRAY OF MATERIALS TO MATERIAL LIST
 function addToMaterialsView(dataArr) {
     materialsSection.innerHTML = null;
 
