@@ -151,7 +151,7 @@ const taskTemplate = [{
 },
 {
     name: 'scrap paint off brick foundation',
-    description: '',
+    description: 'lay down a plastic sheet or painters drop cloth and then use scrapers to get flaking paint off brick',
     requiredTools: [
         {
             name: 'hard steel scrapers',
@@ -179,7 +179,7 @@ const taskTemplate = [{
 },
 {
     name: 'restore brick fireplace',
-    description: '',
+    description: 'experiment with the best methods to restore fireplace to near-original condition.',
     requiredTools: [
         {
             name: 'steel brush',
@@ -207,7 +207,7 @@ const taskTemplate = [{
 },
 {
     name: 'rip out attic framing',
-    description: 'insert.',
+    description: 'wait until replacement framing is ready to go in, then remove existing framing to allow for remaining floor boards to be pulled out.',
     requiredTools: [
         {
             name: 'hammer',
@@ -235,7 +235,7 @@ const taskTemplate = [{
 },
 {
     name: 'wage war against vines',
-    description: 'bring a friend or five.',
+    description: 'bring a friend or five. cut down to six inches above ground, then dig out rootball or apply herbicide.',
     requiredTools: [
         {
             name: 'shovel',
@@ -291,7 +291,7 @@ const taskTemplate = [{
 },
 {
     name: 'clean and plane floorboards',
-    description: 'insert.',
+    description: 'use a scrapper or diamond blade sander first, research least messy ways to remove 100 yrs of grime, then run through bench planner.',
     requiredTools: [
         {
             name: 'hard steel scraper',
